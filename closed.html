@@ -317,24 +317,50 @@
             color: #d1d5db;
         }
 
-        /* Stat highlights grid */
+        /* Stat highlights sections */
+        .stats-group {
+            margin-bottom: 2.25rem;
+            text-align: left;
+        }
+
+        .stats-group-header {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            margin-bottom: 1rem;
+            padding-left: 0.25rem;
+        }
+
+        .stats-group-header i {
+            font-size: 1.1rem;
+            color: var(--secondary);
+        }
+
+        .stats-group-title {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.3px;
+        }
+
         .stats-highlight-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.25rem;
-            margin-bottom: 3rem;
+            gap: 1.1rem;
         }
 
         .stat-card {
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 18px;
-            padding: 1.4rem 1.1rem;
+            padding: 1.35rem 1rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            text-align: center;
         }
 
         .stat-card:hover {
@@ -345,25 +371,25 @@
         }
 
         .stat-icon {
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             color: var(--secondary);
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.55rem;
             display: inline-block;
             filter: drop-shadow(0 0 10px rgba(96, 165, 250, 0.4));
         }
 
         .stat-label {
-            font-size: 0.78rem;
+            font-size: 0.76rem;
             text-transform: uppercase;
-            letter-spacing: 0.9px;
+            letter-spacing: 0.85px;
             color: var(--text-muted);
-            margin-bottom: 0.35rem;
+            margin-bottom: 0.3rem;
             font-weight: 600;
         }
 
         .stat-val {
             font-family: var(--font-display);
-            font-size: 1.65rem;
+            font-size: 1.6rem;
             font-weight: 800;
             color: #ffffff;
             letter-spacing: -0.5px;
@@ -514,37 +540,53 @@
                 </p>
             </div>
 
-            <!-- Legacy highlights -->
-            <div class="stats-highlight-grid">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-gamepad"></i></div>
-                    <div class="stat-label">Matches Processed</div>
-                    <div class="stat-val">444</div>
+            <!-- Tournaments Section (3 boxes) -->
+            <div class="stats-group">
+                <div class="stats-group-header">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span class="stats-group-title">Tournament Analytics</span>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
-                    <div class="stat-label">Players Scouted</div>
-                    <div class="stat-val">1,180+</div>
+                <div class="stats-highlight-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-gamepad"></i></div>
+                        <div class="stat-label">Matches Processed</div>
+                        <div class="stat-val">444</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="stat-label">Players Scouted</div>
+                        <div class="stat-val">1,180+</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="stat-label">Rounds Analyzed</div>
+                        <div class="stat-val">19,745</div>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-layer-group"></i></div>
-                    <div class="stat-label">Rounds Analyzed</div>
-                    <div class="stat-val">19,745</div>
+            </div>
+
+            <!-- Team Praccs Section (3 boxes) -->
+            <div class="stats-group" style="margin-bottom: 3rem;">
+                <div class="stats-group-header">
+                    <i class="fa-solid fa-stopwatch-20"></i>
+                    <span class="stats-group-title">Team Scrims & Praccs</span>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-crosshairs"></i></div>
-                    <div class="stat-label">Kills Logged</div>
-                    <div class="stat-val">141,187</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-bomb"></i></div>
-                    <div class="stat-label">Spikes Planted</div>
-                    <div class="stat-val">13,634</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <div class="stat-label">Teams Tracked</div>
-                    <div class="stat-val">181</div>
+                <div class="stats-highlight-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="stat-label">Teams Registered</div>
+                        <div class="stat-val">+80 Teams</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="stat-label">Praccs Analyzed</div>
+                        <div class="stat-val">1,250+</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                        <div class="stat-label">Top Weekly Streak</div>
+                        <div class="stat-val">17 Weeks</div>
+                    </div>
                 </div>
             </div>
 
